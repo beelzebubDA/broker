@@ -1,0 +1,115 @@
+.copyright {}
+
+.footer {
+    background: #ECF1F7;
+    &_block {
+        padding: 75px 0 45px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @include mobile {
+            padding: 30px 0 24px 0;
+            gap: 20px;
+        }
+    }
+
+    &_top {
+        display: flex;
+        align-items: start;
+        gap: 50px;
+
+        @include mobile {
+            gap: 40px;
+            flex-direction: column;
+        }
+    }
+
+    &_top--left {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 35%;
+
+        @include mobile {
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+
+    &_top-logo {
+        color: #000;
+        font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        @include mobile {
+            font-size: 20px;
+        }
+    }
+
+    &_top--cards {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        @include mobile {
+            gap: 20px;
+        }
+    }
+
+    &_top--card {
+        @include mobile {
+            width: calc(100% / 3 - 20px);
+        }
+    }
+
+    &_top--right {
+        max-width: 65%;
+
+        @include mobile {
+            max-width: 100%;
+        }
+    }
+
+    &_top--text {
+        color: #304468;
+        font-size: 12px;
+    }
+
+    &_bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .copyright {
+            color: #304468;
+            font-size: 12px;
+        }
+    }
+
+    &_bottom--links {
+        display: flex;
+        align-items: center;
+        gap: 120px;
+
+        @include mobile {
+            gap: 12px;
+            flex-direction: column;
+        }
+    }
+
+    &_bottom--link {
+        color: #304468;
+        font-size: 12px;
+        border-bottom: 1px solid #304468;
+    }
+}

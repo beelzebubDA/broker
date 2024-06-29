@@ -1,0 +1,92 @@
+.header {
+
+    .header_block {
+        padding: 60px;
+
+        @include mobile {
+            padding: 20px 0 0 0;
+        }
+    }
+
+    .header_logo {
+        color: #000;
+    }
+}
+
+.offers {
+    &_block {
+        padding: 30px 0 130px 0;
+
+        @include mobile {
+            padding: 50px 0 45px 0;
+        }
+    }
+
+    &_title {
+        text-align: center;
+    }
+
+    &_items {
+        padding-top: 45px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        @include mobile {
+            padding-top: 40px;
+        }
+    }
+
+    &_item {
+        border-radius: 20px;
+        background: #FFF;
+        box-shadow: 0px 4px 15px 0px rgba(33, 39, 44, 0.10);
+        padding: 30px 24px;
+        width: 349px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_item--img {
+        width: 140px;
+        height: 42px;
+        flex-shrink: 0;
+    }
+
+    &_item--info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 50px;
+        justify-content: space-between;
+        padding-top: 20px;
+    }
+
+    &_item--info-text {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &_item--info-span {}
+
+    &_item--info-main {}
+
+    &_item--action {
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &_item--btn {
+        height: 44px;
+        margin-top: 20px;
+
+        @include mobile {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}

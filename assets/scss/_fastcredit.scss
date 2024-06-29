@@ -1,0 +1,606 @@
+.fastcredit {
+  &_block {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_form {
+    max-width: 1110px;
+    width: 100%;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 4px 15px 0px rgba(33, 39, 44, 0.1);
+    padding: 65px 84px 65px 95px;
+    position: relative;
+    z-index: 2;
+    top: -75px;
+
+    @include mobile {
+      top: -15px;
+      padding: 30px 12px;
+    }
+  }
+
+  &_title {
+    text-align: center;
+
+    .mainTitle {
+      display: block;
+    }
+
+    .lastTitle {
+      display: none;
+    }
+
+    &.active {
+      .mainTitle {
+        display: none;
+      }
+
+      .lastTitle {
+        display: block;
+      }
+    }
+
+    @include mobile {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &_steps {
+    .step01 {
+      display: none;
+    }
+
+    .step02,
+    .step03,
+    .step04 {
+      display: none;
+
+      .fastcredit_step--proc {
+        .fastcredit_step--proc-text {
+          .fastcredit_step--proc-title {
+            color: #fff;
+          }
+
+          svg {
+            rotate: 180deg;
+          }
+        }
+
+        &::after {
+          width: 28%;
+        }
+      }
+
+      .fastcredit_step--items {
+        margin-top: 20px;
+      }
+
+      .fastcredit_step--item {
+        flex-wrap: wrap;
+        gap: 0 30px;
+
+        .fastcredit_step--item-side {
+          margin-bottom: 20px;
+        }
+      }
+
+      .fastcredit_step--item--title {
+        width: 100%;
+        padding-bottom: 12px;
+      }
+
+      .fastcredit_step--action {
+        gap: 30px;
+
+        @include mobile {
+          flex-direction: column;
+          gap: 4px;
+
+          .fastcredit_step--btn:last-child {
+            margin-top: 0;
+          }
+        }
+
+        .fastcredit_step--btn {
+          &.frststep {
+            color: #0074FF;
+            border-radius: 10px;
+            border: 2px solid #0074FF;
+            background-color: transparent;
+          }
+        }
+      }
+
+      .fastcredit {
+        &_step--prev-info {
+          padding: 20px 16px;
+          border-radius: 10px;
+          border: 2px dashed #304468;
+          margin-top: 30px;
+          display: flex;
+          align-items: center;
+          gap: 115px;
+
+          @include mobile {
+            padding: 12px;
+            gap: 12px;
+            justify-content: space-between;
+            align-items: start;
+            flex-wrap: wrap;
+          }
+        }
+
+        &_step--prev-title {
+          color: #304468;
+          font-family: Inter;
+          font-size: 24px;
+          font-weight: 700;
+
+          @include mobile {
+            font-size: 20px;
+            width: calc(50% - 6px);
+          }
+        }
+
+        &_step--prev-item {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+
+          @include mobile {
+
+            &:nth-child(1) {
+              order: 1;
+            }
+
+            &:nth-child(2) {
+              order: 1;
+            }
+
+            &:nth-child(3) {
+              order: 1;
+            }
+          }
+        }
+
+        &_step--prev-item--span {}
+
+        &_step--prev-item--info {}
+      }
+
+      .fastcredit_step--item:first-child {
+        margin-bottom: 0;
+
+        .fastcredit_step--item-side:nth-child(4) {
+          margin-bottom: 0;
+
+          @include mobile {
+            margin-bottom: 15px;
+          }
+        }
+
+        .fastcredit_step--item-side:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .step03 {
+
+      .fastcredit_step--proc {
+
+        &::after {
+          width: 1%;
+        }
+      }
+
+      .skipBtn {}
+
+      .fastcredit {
+        &_step--share {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 40px;
+          flex-direction: column;
+          padding-top: 40px;
+
+          @include mobile {
+            gap: 30px;
+            padding-top: 30px;
+          }
+        }
+
+        &_step--share-title {
+          text-align: center;
+          font-size: 24px;
+          width: 70%;
+
+          @include mobile {
+            width: 100%;
+            font-size: 20px;
+          }
+        }
+
+        &_step--share-span {}
+
+        &_step--share-messangers {
+          display: flex;
+          align-items: center;
+          gap: 24px;
+        }
+
+        &_step--share-messanger {
+          width: 100px;
+          height: 100%;
+
+          @include mobile {
+            width: 80px;
+          }
+        }
+
+        &_step--share-btn {
+          color: #6B6968;
+        }
+      }
+    }
+
+    .step04 {
+      .fastcredit_step--proc {
+        margin: 40px 0 90px 0;
+
+        @include mobile {
+          margin: 45px 0 30px 0;
+        }
+
+        &::after {
+          width: 0%;
+        }
+      }
+
+      .getloan_info--title {
+        font-size: 24px;
+
+        @include mobile {
+          font-size: 20px;
+        }
+      }
+
+      .getloan_info--text {
+        width: 100%;
+      }
+      
+      .getloan_info--right {
+        @include mobile {
+          padding-bottom: 60px;
+        }
+      }
+    }
+  }
+
+  &_step {
+
+    &.active {
+      display: block;
+    }
+
+    .input {
+      width: 100%;
+      display: flex;
+      height: 60px;
+      padding: 19px 16px;
+      align-items: flex-start;
+      gap: 10px;
+      flex-shrink: 0;
+      border-radius: 10px;
+      background: #ecf1f7;
+
+      @include mobile {
+        height: 37px;
+        padding: 10px 12px;
+      }
+
+      &.daysInput {
+        height: 20px;
+        width: 70%;
+        background-color: white;
+        padding-left: 0;
+
+        @include mobile {
+          width: 100%;
+          height: 17px;
+        }
+      }
+
+      &.priceInput {
+        height: 20px;
+        width: 70%;
+        background-color: white;
+        padding-left: 0;
+
+        @include mobile {
+          width: 100%;
+          height: 17px;
+        }
+      }
+
+      color: black;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+
+      @include mobile {
+        font-size: 14px;
+      }
+
+      &::placeholder {
+        color: #6b6968;
+      }
+    }
+
+    input[type="range"] {
+      width: 100%;
+      cursor: pointer;
+      border-radius: 8px;
+      height: 1px;
+      background-color: #ecf1f7;
+      transition: background 450ms ease-in;
+    }
+
+    input[type="range"]::-webkit-slider-runnable-track {
+      height: 15px;
+      -webkit-appearance: none;
+      color: #bb1313;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      border: 3px solid #469cf3;
+      height: 15px;
+      width: 15px;
+      border-radius: 15px;
+      background: #ffffff;
+      cursor: pointer;
+      -webkit-appearance: none;
+    }
+
+    input[type="range"]::-ms-thumb {
+      border: 3px solid #469cf3;
+      height: 15px;
+      width: 15px;
+      border-radius: 15px;
+      background: #ffffff;
+      cursor: pointer;
+    }
+
+    input[type="range"]::-moz-range-progress {
+      background-color: #469cf3;
+    }
+
+    input[type="range"]::-moz-range-track {
+      background-color: #469cf3;
+    }
+
+    /* IE*/
+    input[type="range"]::-ms-fill-lower {
+      background-color: #469cf3;
+    }
+
+    input[type="range"]::-ms-fill-upper {
+      background-color: #9a5d96;
+    }
+  }
+
+  &_step--counts {
+    color: #304468;
+    text-align: center;
+    padding: 40px 0 16px 0;
+
+    @include mobile {
+      padding: 20px 0 12px 0;
+    }
+  }
+
+  &_step--count-span {}
+
+  &_step--count {}
+
+  &_step--proc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    background: #ecf1f7;
+    overflow: hidden;
+    position: relative;
+    background-image: url(../imgs/steps/stepsprocces.png);
+    background-color: #1bb737;
+    background-size: contain;
+    background-position: 0%;
+
+    @include mobile {
+      height: 20px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 72%;
+      height: 110%;
+      background: #ecf1f7;
+      z-index: 1;
+    }
+  }
+
+  &_step--proc-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    z-index: 2;
+
+    @include mobile {
+      gap: 4.5px;
+
+      svg {
+        width: 11.5px;
+        height: 4px;
+      }
+    }
+  }
+
+  &_step--proc-title {
+    @include mobile {
+      font-size: 8px;
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  &_step--items {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+
+    @include mobile {
+      gap: 15px;
+    }
+  }
+
+  &_step--item {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 15px;
+
+      &:first-child {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &_step--item-side {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    width: calc(50% - 15px);
+    position: relative;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &_step--item-span {
+    color: #304468;
+    font-size: 12px;
+    padding-bottom: 8px;
+  }
+
+  &_step--error-text {
+    color: #fc0102;
+    font-size: 12px;
+    position: absolute;
+    bottom: -20px;
+    display: none;
+
+    @include mobile {
+      bottom: -12px;
+      font-size: 10px;
+    }
+
+    &.error {
+      display: block;
+    }
+  }
+
+  &_step--info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0 30px 0;
+
+    @include mobile {
+      flex-direction: column;
+      margin: 15px 0 20px 0;
+      gap: 15px;
+    }
+  }
+
+  &_step--info-item {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 12px;
+    width: calc(50% - 15px);
+
+    @include mobile {
+      width: 100%;
+      gap: 8px;
+
+      img {
+        width: 40px !important;
+      }
+    }
+
+    img {
+      width: 60px;
+      height: auto;
+    }
+  }
+
+  &_step--info-span {
+    color: #304468;
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+  &_step--label {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 12px;
+    color: #304468;
+    cursor: pointer;
+
+    @include mobile {
+      gap: 8px;
+      font-size: 8px;
+    }
+  }
+
+  &_step--checkbox {
+    width: 20px;
+    height: 20px;
+  }
+
+  &_step--checkbox-span {}
+
+  .fastcredit_step--action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

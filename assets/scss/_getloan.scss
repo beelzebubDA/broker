@@ -1,0 +1,213 @@
+.getloan {
+    &_block {
+        padding: 75px 0;
+
+        @include mobile {
+            padding: 45px 0;
+        }
+    }
+
+    &_title {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    &_sides {
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+
+        @include mobile {
+            gap: 60px;
+            position: relative;
+        }
+    }
+
+    &_items {
+        display: flex;
+        align-items: end;
+        gap: 30px;
+        justify-content: center;
+        text-align: center;
+
+        @include mobile {
+        flex-direction: column;
+        }
+    }
+
+    &_item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 36px 24px 34px 24px;
+        border-radius: 20px;
+        background: #FFF;
+        box-shadow: 0px 4px 15px 0px rgba(33, 39, 44, 0.10);
+        max-width: 350px;
+        height: 292px;
+
+        @include mobile {
+        height: 100%;
+        padding: 21px 24px 24px 24px;
+
+        }
+
+        &:first-child {
+            p {
+                width: 90%;
+
+                @include mobile {
+                    width: 100%;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            margin-bottom: 60px;
+
+            @include mobile {
+                margin-bottom: 0;
+            }
+        }
+
+        &:last-child {
+            p {
+                width: 90%;
+
+                @include mobile {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &_item--subtitle {}
+
+    &_item--text {
+    }
+
+    &_info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 125px;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    &_info--left {
+        max-width: 445px;
+        .getloan_info--left-item {
+
+        }
+    }
+
+    &_info--title {
+        padding-bottom: 20px;
+
+        @include mobile {
+        text-align: center;
+            padding-bottom: 12px;
+        }
+    }
+
+    &_info--text {
+        width: 85%;
+        
+        @include mobile {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &_info--btn {
+        @include mobile {
+            position: absolute;
+            bottom: 0;
+        }
+    
+    }
+
+    &_info--right {
+        max-width: 540px;
+        padding-bottom: 80px;
+    }
+
+    &_info--items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px 30px;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    &_info--item {
+        width: calc(50% - 15px);
+
+        @include mobile {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            &:first-child {
+                .getloan_info--item-text {
+                    width: 70%;
+                }
+            }
+
+            &:nth-child(2) {
+                order: 3;
+
+                .getloan_info--item-text {
+                    width: 80%;
+                }
+            }
+
+            &:nth-child(3) {
+                order: 2;
+                .getloan_info--item-text {
+                    width: 90%;
+                }
+            }
+
+            &:nth-child(4) {
+                order: 4;
+
+                .getloan_info--item-text {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    &_info--item-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        background: #ECF1F7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 45px;
+            height: 45px;
+        }
+    }
+
+    &_info--item-title {
+        display: block;
+        padding: 12px 0 8px 0;
+    }
+
+    &_info--item-text {}
+}

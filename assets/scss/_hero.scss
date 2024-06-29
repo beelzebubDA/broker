@@ -1,0 +1,138 @@
+
+.hero {
+
+    @include mobile {
+        background: #E8EFF7;
+        overflow: hidden;
+    }
+
+    &_block {
+        border-radius: 20px;
+        background: #ECF1F7;
+        margin-top: 50px;
+
+        @include mobile {
+            margin-top: 0;
+            padding-top: 20px;
+            padding-bottom: 50px;
+        }
+
+    }
+
+    &_sides {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+
+        @include mobile {
+            overflow: visible;
+        }
+
+        .hero_img {
+            position: absolute;
+            width: 445px;
+            height: auto;
+            right: 0;
+            bottom: 45px;
+
+            @include mobile {
+                width: 202px;
+                bottom: -27px;
+                right: -75px;
+            }
+        }
+    }
+
+    &_left {
+        padding: 40px 0 140px 135px;
+
+        @include mobile {
+            padding: 0;
+        }
+    }
+
+    &_logo {
+        color: #000;
+        font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding-bottom: 49px;
+
+        @include mobile {
+            font-size: 20px;
+            padding-bottom: 31px;
+        }
+    }
+
+    &_title {
+        font-size: 50px;
+
+        @include mobile {
+            font-size: 20px;
+        }
+    }
+
+    &_text {
+        padding: 32px 0 40px 0;
+        width: 60%;
+        color: #304468;
+
+        @include mobile {
+            width: 90%;
+            padding: 16px 0 20px 0;
+        }
+    }
+
+    &_info--items {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 40px;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: start;
+            gap: 20px;
+        }
+    }
+
+    &_info--item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        @include mobile {
+            gap: 8px;
+        }
+    }
+
+    &_info--item-icon {
+        .imgWhite {
+            display: none;
+        }
+        width: 40px;
+        height: 40px;
+        
+        @include mobile {
+            width: 28px;
+            height: 28px;
+        }
+    }
+
+    &_info--item-span {
+        color: #304468;
+        font-size: 14px;
+
+        @include mobile {
+            font-size: 12px;
+        }
+    }
+
+    &_right {}
+
+    &_right--img {}
+}
